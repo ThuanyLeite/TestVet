@@ -8,4 +8,5 @@ e as vezes predisposição.. neste caso ela perdeu completamente a função de u
 Não levar ao pé da letra como esta!
 Em progresso e sem serviço de salvamento em cloud, apenas em localstorage!
 Obrigada pela paciencia!!
+---Falta adicionar o sexo.
 ###################################################################################################################################################################
