@@ -604,6 +604,15 @@ function renderSeniorCheck(pet, log) {
 function renderProfile() {
   const pet = getActivePet();
   const el = document.getElementById('profile-content');
+  const genderIcon = pet.gender === 'macho' ? '♂️' : pet.gender === 'femea' ? '♀️' : '';
+  
+  el.innerHTML = `
+    <div class="profile-hero">
+      <div class="profile-avatar">${avatarHtml}</div>
+      <div>
+        <div class="profile-name">${pet.name} ${genderIcon}</div> 
+        <div class="profile-breed">${pet.type === 'dog' ? '🐕 Cão' : '🐱 Gato'} · ${pet.breed || 'Sem raça definida'}</div>
+        ```
   if (!el) return;
 
   if (!pet) {
@@ -862,15 +871,20 @@ function renderAddPetModal(pet) {
 
     <input type="hidden" id="pet-type-val" value="${pet?.type || 'dog'}">
 
+  /* ... dentro da função renderAddPetModal(pet) ... */
+
     <div class="form-group">
       <label class="form-label">Nome do pet</label>
       <input class="form-control" type="text" id="pet-name" placeholder="Ex: Rex, Mimi, Bolinha..." value="${pet?.name || ''}">
     </div>
 
     <div class="form-group">
-      <label class="form-label">Raça</label>
-      <input class="form-control" type="text" id="pet-breed" placeholder="Ex: Labrador, Siamês... (deixar vazio = SRD)">
-      <div class="form-control-hint">Deixe vazio para "Sem Raça Definida"</div>
+      <label class="form-label">Gênero</label>
+      <div class="toggle-group">
+        <button class="toggle-btn ${pet?.gender === 'macho' ? 'active' : ''}" id="gender-macho" onclick="selectGender('macho')">♂️ Macho</button>
+        <button class="toggle-btn ${pet?.gender === 'femea' ? 'active' : ''}" id="gender-femea" onclick="selectGender('femea')">♀️ Fêmea</button>
+      </div>
+      <input type="hidden" id="pet-gender-val" value="${pet?.gender || ''}">
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
@@ -934,6 +948,11 @@ function selectAnimalType(type) {
   const icon = document.getElementById('avatar-default-icon');
   if (icon && !currentAvatarData) icon.src = `images/${type}.svg`;
 }
+function selectGender(gender) {
+  document.getElementById('pet-gender-val').value = gender;
+  document.getElementById('gender-macho').classList.toggle('active', gender === 'macho');
+  document.getElementById('gender-femea').classList.toggle('active', gender === 'femea');
+}
 
 function handleAvatarUpload(input) {
   const file = input.files[0];
@@ -954,9 +973,11 @@ function savePet(editId) {
   if (isNaN(age) || age < 0) { showToast('⚠️ Insira a idade corretamente'); return; }
 
   const data = {
+    /* ... dentro da função savePet(editId) ... */
     id: editId || genId(),
     type: document.getElementById('pet-type-val')?.value || 'dog',
     name,
+    gender: document.getElementById('pet-gender-val')?.value || '', // Adicionado aqui
     breed: document.getElementById('pet-breed')?.value.trim() || '',
     age,
     weight: parseFloat(document.getElementById('pet-weight')?.value) || null,
