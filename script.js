@@ -16,17 +16,17 @@ const DB = {
 const VET_DATA = {
   dog: {
     lifeStages: [
-      { name: 'Filhote',    emoji: '🐾', badge: 'badge-puppy',    from: 0,   to: 0.5,  desc: 'Período de socialização e vacinações essenciais. Alimentação 3-4x/dia com ração específica para filhotes.' },
-      { name: 'Júnior',     emoji: '🌱', badge: 'badge-junior',   from: 0.5, to: 1,    desc: 'Fase de crescimento acelerado. Manter vacinações em dia e iniciar treino básico.' },
-      { name: 'Adulto',     emoji: '💪', badge: 'badge-adult',    from: 1,   to: 7,    desc: 'Fase mais estável. Exames anuais, vacinações de reforço e controlo de parasitas.' },
-      { name: 'Maduro',     emoji: '🍂', badge: 'badge-mature',   from: 7,   to: 10,   desc: 'Início de transição para sénior. Consultas semestrais recomendadas. Monitorizar peso.' },
-      { name: 'Sénior',     emoji: '🌟', badge: 'badge-senior',   from: 10,  to: 14,   desc: 'Período sénior. Dieta especial, exercício moderado, exames de sangue anuais essenciais.' },
-      { name: 'Geriátrico', emoji: '👴', badge: 'badge-geriatric', from: 14, to: 999,  desc: 'Cuidados intensivos recomendados. Atenção a artrite, perda de visão/audição e incontinência.' }
+      { name: 'Filhote', emoji: '🐾', badge: 'badge-puppy', from: 0, to: 0.5, desc: 'Período de socialização e vacinações essenciais. Alimentação 3-4x/dia com ração específica para filhotes.' },
+      { name: 'Júnior', emoji: '🌱', badge: 'badge-junior', from: 0.5, to: 1, desc: 'Fase de crescimento acelerado. Manter vacinações em dia e iniciar treino básico.' },
+      { name: 'Adulto', emoji: '💪', badge: 'badge-adult', from: 1, to: 7, desc: 'Fase mais estável. Exames anuais, vacinações de reforço e controlo de parasitas.' },
+      { name: 'Maduro', emoji: '🍂', badge: 'badge-mature', from: 7, to: 10, desc: 'Início de transição para sénior. Consultas semestrais recomendadas. Monitorizar peso.' },
+      { name: 'Sénior', emoji: '🌟', badge: 'badge-senior', from: 10, to: 14, desc: 'Período sénior. Dieta especial, exercício moderado, exames de sangue anuais essenciais.' },
+      { name: 'Geriátrico', emoji: '👴', badge: 'badge-geriatric', from: 14, to: 999, desc: 'Cuidados intensivos recomendados. Atenção a artrite, perda de visão/audição e incontinência.' }
     ],
-    smallBreed:  { seniorAge: 10, maxAge: 18 },
-    mediumBreed: { seniorAge: 9,  maxAge: 15 },
-    largeBreed:  { seniorAge: 8,  maxAge: 13 },
-    giantBreed:  { seniorAge: 6,  maxAge: 11 },
+    smallBreed: { seniorAge: 10, maxAge: 18 },
+    mediumBreed: { seniorAge: 9, maxAge: 15 },
+    largeBreed: { seniorAge: 8, maxAge: 13 },
+    giantBreed: { seniorAge: 6, maxAge: 11 },
     waterMl: (kg) => Math.round(60 * kg),
     dailyFeedings: { puppy: 4, junior: 3, adult: 2, senior: 3 },
     foodGrams: (kg, stage) => {
@@ -38,12 +38,12 @@ const VET_DATA = {
   },
   cat: {
     lifeStages: [
-      { name: 'Filhote',    emoji: '🐾', badge: 'badge-puppy',    from: 0,   to: 0.5,  desc: 'Socialização crítica. Vacinações obrigatórias. Amamentação ou leite para gatinhos.' },
-      { name: 'Júnior',     emoji: '🌱', badge: 'badge-junior',   from: 0.5, to: 2,    desc: 'Crescimento e desenvolvimento. Considerar castração entre 4-6 meses.' },
-      { name: 'Adulto',     emoji: '💪', badge: 'badge-adult',    from: 2,   to: 7,    desc: 'Fase estável. Manter ração de qualidade, exercício e enriquecimento ambiental.' },
-      { name: 'Maduro',     emoji: '🍂', badge: 'badge-mature',   from: 7,   to: 11,   desc: 'Equivalente a 44-60 anos humanos. Atenção ao peso e saúde dentária.' },
-      { name: 'Sénior',     emoji: '🌟', badge: 'badge-senior',   from: 11,  to: 15,   desc: 'Consultas semestrais essenciais. Risco aumentado de doenças renais e hipertiroidismo.' },
-      { name: 'Geriátrico', emoji: '👴', badge: 'badge-geriatric', from: 15, to: 999,  desc: 'Monitorização constante. Exames regulares de sangue e urina altamente recomendados.' }
+      { name: 'Filhote', emoji: '🐾', badge: 'badge-puppy', from: 0, to: 0.5, desc: 'Socialização crítica. Vacinações obrigatórias. Amamentação ou leite para gatinhos.' },
+      { name: 'Júnior', emoji: '🌱', badge: 'badge-junior', from: 0.5, to: 2, desc: 'Crescimento e desenvolvimento. Considerar castração entre 4-6 meses.' },
+      { name: 'Adulto', emoji: '💪', badge: 'badge-adult', from: 2, to: 7, desc: 'Fase estável. Manter ração de qualidade, exercício e enriquecimento ambiental.' },
+      { name: 'Maduro', emoji: '🍂', badge: 'badge-mature', from: 7, to: 11, desc: 'Equivalente a 44-60 anos humanos. Atenção ao peso e saúde dentária.' },
+      { name: 'Sénior', emoji: '🌟', badge: 'badge-senior', from: 11, to: 15, desc: 'Consultas semestrais essenciais. Risco aumentado de doenças renais e hipertiroidismo.' },
+      { name: 'Geriátrico', emoji: '👴', badge: 'badge-geriatric', from: 15, to: 999, desc: 'Monitorização constante. Exames regulares de sangue e urina altamente recomendados.' }
     ],
     waterMl: (kg) => Math.round(50 * kg),
     dailyFeedings: { kitten: 4, junior: 3, adult: 2, senior: 3 },
@@ -59,29 +59,29 @@ const VET_DATA = {
 /* ── Stool/Vomit assessment ── */
 const HEALTH_ALERTS = {
   fecesColors: [
-    { color: '#8B4513', label: 'Castanho normal', risk: 'low',    msg: 'Cor normal — tudo bem! ✓' },
-    { color: '#A0522D', label: 'Castanho claro',  risk: 'low',    msg: 'Normal. Pode indicar dieta alta em fibras.' },
-    { color: '#556B2F', label: 'Esverdeado',       risk: 'medium', msg: 'Pode indicar ingestão de erva em excesso ou infecção. Observar.' },
-    { color: '#FF6347', label: 'Avermelhado',      risk: 'high',   msg: '⚠️ Sangue vermelho vivo — consulte o veterinário urgentemente!' },
-    { color: '#1C1C1C', label: 'Preto/Alcatrão',   risk: 'high',   msg: '⚠️ Possível hemorragia interna! Consulta veterinária URGENTE.' },
-    { color: '#FFFACD', label: 'Amarelo/Bege',     risk: 'medium', msg: 'Pode indicar problema no fígado ou pâncreas. Monitore e consulte.' },
-    { color: '#FF69B4', label: 'Rosado',            risk: 'high',   msg: '⚠️ Sangue — consulte o veterinário o mais brevemente possível.' }
+    { color: '#8B4513', label: 'Castanho normal', risk: 'low', msg: 'Cor normal — tudo bem! ✓' },
+    { color: '#A0522D', label: 'Castanho claro', risk: 'low', msg: 'Normal. Pode indicar dieta alta em fibras.' },
+    { color: '#556B2F', label: 'Esverdeado', risk: 'medium', msg: 'Pode indicar ingestão de erva em excesso ou infecção. Observar.' },
+    { color: '#FF6347', label: 'Avermelhado', risk: 'high', msg: '⚠️ Sangue vermelho vivo — consulte o veterinário urgentemente!' },
+    { color: '#1C1C1C', label: 'Preto/Alcatrão', risk: 'high', msg: '⚠️ Possível hemorragia interna! Consulta veterinária URGENTE.' },
+    { color: '#FFFACD', label: 'Amarelo/Bege', risk: 'medium', msg: 'Pode indicar problema no fígado ou pâncreas. Monitore e consulte.' },
+    { color: '#FF69B4', label: 'Rosado', risk: 'high', msg: '⚠️ Sangue — consulte o veterinário o mais brevemente possível.' }
   ],
   fecesConsistency: [
-    { id: 'pellets',   label: 'Bolinhas/Pellets', risk: 'medium', msg: 'Fezes duras — possível desidratação. Aumentar ingestão de água.' },
-    { id: 'firm',      label: 'Firmes/Normal',    risk: 'low',    msg: 'Consistência ideal! ✓' },
-    { id: 'soft',      label: 'Moles/Pastosas',   risk: 'medium', msg: 'Fezes moles — pode ser mudança de dieta ou stress. Observe por 24h.' },
-    { id: 'liquid',    label: 'Líquidas/Diarreia', risk: 'high',  msg: '⚠️ Diarreia — assegure hidratação. Se persistir >24h, consulte veterinário.' },
-    { id: 'blood',     label: 'Com sangue',        risk: 'high',  msg: '🚨 Sangue nas fezes — consulta veterinária URGENTE.' },
-    { id: 'mucus',     label: 'Com muco',          risk: 'medium', msg: 'Muco nas fezes pode indicar inflamação intestinal. Monitore.' }
+    { id: 'pellets', label: 'Bolinhas/Pellets', risk: 'medium', msg: 'Fezes duras — possível desidratação. Aumentar ingestão de água.' },
+    { id: 'firm', label: 'Firmes/Normal', risk: 'low', msg: 'Consistência ideal! ✓' },
+    { id: 'soft', label: 'Moles/Pastosas', risk: 'medium', msg: 'Fezes moles — pode ser mudança de dieta ou stress. Observe por 24h.' },
+    { id: 'liquid', label: 'Líquidas/Diarreia', risk: 'high', msg: '⚠️ Diarreia — assegure hidratação. Se persistir >24h, consulte veterinário.' },
+    { id: 'blood', label: 'Com sangue', risk: 'high', msg: '🚨 Sangue nas fezes — consulta veterinária URGENTE.' },
+    { id: 'mucus', label: 'Com muco', risk: 'medium', msg: 'Muco nas fezes pode indicar inflamação intestinal. Monitore.' }
   ],
   vomitColors: [
-    { color: '#F5F5DC', label: 'Espuma branca',    risk: 'medium', msg: 'Pode indicar estômago vazio ou refluxo. Se recorrente, consulte.' },
-    { color: '#FFFF00', label: 'Amarelo/Bile',      risk: 'medium', msg: 'Vómito bilioso — comum em jejum prolongado. Ajuste horários.' },
-    { color: '#228B22', label: 'Verde',             risk: 'high',   msg: '⚠️ Possível ingestão de veneno ou obstrução. Consulte urgentemente.' },
-    { color: '#FF6347', label: 'Sangue vivo',       risk: 'high',   msg: '🚨 Sangue no vómito — emergência veterinária IMEDIATA.' },
-    { color: '#8B4513', label: 'Castanho',          risk: 'high',   msg: '🚨 Vómito castanho pode indicar obstrução intestinal. URGENTE.' },
-    { color: '#D2691E', label: 'Comida não digerida', risk: 'low',  msg: 'Comum se comeu muito rápido. Tente alimentação mais lenta.' }
+    { color: '#F5F5DC', label: 'Espuma branca', risk: 'medium', msg: 'Pode indicar estômago vazio ou refluxo. Se recorrente, consulte.' },
+    { color: '#FFFF00', label: 'Amarelo/Bile', risk: 'medium', msg: 'Vómito bilioso — comum em jejum prolongado. Ajuste horários.' },
+    { color: '#228B22', label: 'Verde', risk: 'high', msg: '⚠️ Possível ingestão de veneno ou obstrução. Consulte urgentemente.' },
+    { color: '#FF6347', label: 'Sangue vivo', risk: 'high', msg: '🚨 Sangue no vómito — emergência veterinária IMEDIATA.' },
+    { color: '#8B4513', label: 'Castanho', risk: 'high', msg: '🚨 Vómito castanho pode indicar obstrução intestinal. URGENTE.' },
+    { color: '#D2691E', label: 'Comida não digerida', risk: 'low', msg: 'Comum se comeu muito rápido. Tente alimentação mais lenta.' }
   ]
 };
 
@@ -181,8 +181,8 @@ function navigate(screen, petId) {
     t.classList.toggle('active', t.dataset.screen === screen);
   });
   // Render
-  if (screen === 'home')    renderHome();
-  if (screen === 'daily')   renderDaily();
+  if (screen === 'home') renderHome();
+  if (screen === 'daily') renderDaily();
   if (screen === 'profile') renderProfile();
   if (screen === 'history') renderHistory();
   window.scrollTo(0, 0);
@@ -302,17 +302,17 @@ function renderDaily() {
     <!-- ÁGUA -->
     <div class="card-section">
       <div class="card-section-title"><img src="images/water.svg" style="width:22px;height:22px"> Ingestão de Água</div>
-      <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:.75rem">Consumo recomendado: <strong>${waterMl} ml/dia</strong> (≈ ${Math.ceil(waterMl/250)} copos de 250ml)</p>
+      <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:.75rem">Consumo recomendado: <strong>${waterMl} ml/dia</strong> (≈ ${Math.ceil(waterMl / 250)} copos de 250ml)</p>
 
       <div style="margin-bottom:.75rem">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.4rem">
           <span style="font-size:.85rem;font-weight:600">Copos bebidos (250ml cada)</span>
-          <span style="font-size:1.1rem;font-weight:700;color:var(--blue)">${log.water.glasses} / ${Math.ceil(waterMl/250)}</span>
+          <span style="font-size:1.1rem;font-weight:700;color:var(--blue)">${log.water.glasses} / ${Math.ceil(waterMl / 250)}</span>
         </div>
         <div style="display:flex;gap:.5rem;align-items:center">
           <button class="btn-secondary btn-sm" onclick="adjustWater(-1)">−</button>
           <div style="flex:1;height:10px;background:var(--bg2);border-radius:99px;overflow:hidden">
-            <div style="height:100%;width:${Math.min(100,Math.round(log.water.glasses/Math.ceil(waterMl/250)*100))}%;background:linear-gradient(90deg,#60a5fa,#3b82f6);border-radius:99px;transition:width .4s"></div>
+            <div style="height:100%;width:${Math.min(100, Math.round(log.water.glasses / Math.ceil(waterMl / 250) * 100))}%;background:linear-gradient(90deg,#60a5fa,#3b82f6);border-radius:99px;transition:width .4s"></div>
           </div>
           <button class="btn-primary btn-sm" onclick="adjustWater(1)">+</button>
         </div>
@@ -403,7 +403,7 @@ function renderDaily() {
       <div class="form-group">
         <label class="form-label">Cor das fezes</label>
         <div class="color-grid">
-          ${HEALTH_ALERTS.fecesColors.map((c,i) => `
+          ${HEALTH_ALERTS.fecesColors.map((c, i) => `
             <div class="color-swatch ${log.feces.colorIndex === i ? 'selected' : ''}"
               style="background:${c.color}"
               title="${c.label}"
@@ -448,7 +448,7 @@ function renderDaily() {
       <div class="form-group">
         <label class="form-label">Cor do vómito</label>
         <div class="color-grid">
-          ${HEALTH_ALERTS.vomitColors.map((c,i) => `
+          ${HEALTH_ALERTS.vomitColors.map((c, i) => `
             <div class="color-swatch ${log.vomit.colorIndex === i ? 'selected' : ''}"
               style="background:${c.color};border:1.5px solid #ccc"
               title="${c.label}"
@@ -481,7 +481,7 @@ function renderDaily() {
       <div class="form-group">
         <label class="form-label">Como estava o humor hoje?</label>
         <div class="toggle-group">
-          ${['😊 Animado','😴 Letárgico','😰 Ansioso','😾 Irritável','😶 Normal'].map(m => `
+          ${['😊 Animado', '😴 Letárgico', '😰 Ansioso', '😾 Irritável', '😶 Normal'].map(m => `
             <button class="toggle-btn ${log.mood === m ? 'active' : ''}" onclick="setMood('${m}')">${m}</button>
           `).join('')}
         </div>
@@ -490,7 +490,7 @@ function renderDaily() {
       <div class="form-group">
         <label class="form-label">Nível de atividade física</label>
         <div class="toggle-group">
-          ${['🏃 Alto','🚶 Normal','😴 Baixo','🛋️ Muito baixo'].map(a => `
+          ${['🏃 Alto', '🚶 Normal', '😴 Baixo', '🛋️ Muito baixo'].map(a => `
             <button class="toggle-btn ${log.activity === a ? 'active' : ''}" onclick="setActivity('${a}')">${a}</button>
           `).join('')}
         </div>
@@ -577,14 +577,14 @@ function renderSeniorCheck(pet, log) {
       <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1rem">Para animais séniores, monitorize estas condições regularmente:</p>
 
       ${[
-        { key:'diaper', label:'Usa fraldas?', icon:'🩲' },
-        { key:'blind', label:'Perda de visão?', icon:'👁️' },
-        { key:'deaf', label:'Perda de audição?', icon:'👂' },
-        { key:'mobility', label:'Dificuldade de mobilidade/articulações?', icon:'🦴' },
-        { key:'incontinence', label:'Incontinência urinária?', icon:'💧' },
-        { key:'confusion', label:'Desorientação/confusão?', icon:'🌀' },
-        { key:'appetite_loss', label:'Perda de apetite significativa?', icon:'😿' }
-      ].map(item => `
+      { key: 'diaper', label: 'Usa fraldas?', icon: '🩲' },
+      { key: 'blind', label: 'Perda de visão?', icon: '👁️' },
+      { key: 'deaf', label: 'Perda de audição?', icon: '👂' },
+      { key: 'mobility', label: 'Dificuldade de mobilidade/articulações?', icon: '🦴' },
+      { key: 'incontinence', label: 'Incontinência urinária?', icon: '💧' },
+      { key: 'confusion', label: 'Desorientação/confusão?', icon: '🌀' },
+      { key: 'appetite_loss', label: 'Perda de apetite significativa?', icon: '😿' }
+    ].map(item => `
         <div class="check-item" onclick="toggleSeniorCheck('${item.key}')">
           <input type="checkbox" id="sc-${item.key}" ${sc[item.key] ? 'checked' : ''} onclick="event.stopPropagation();toggleSeniorCheck('${item.key}')">
           <label for="sc-${item.key}">${item.icon} ${item.label}</label>
@@ -605,7 +605,7 @@ function renderProfile() {
   const pet = getActivePet();
   const el = document.getElementById('profile-content');
   const genderIcon = pet.gender === 'macho' ? '♂️' : pet.gender === 'femea' ? '♀️' : '';
-  
+
   el.innerHTML = `
     <div class="profile-hero">
       <div class="profile-avatar">${avatarHtml}</div>
@@ -680,8 +680,8 @@ function renderProfile() {
     <div class="card-section">
       <div class="card-section-title"><img src="images/medication.svg" style="width:20px;height:20px"> Medicações Actuais</div>
       ${(pet.medications || []).length === 0
-        ? `<p style="font-size:.85rem;color:var(--text-muted)">Nenhuma medicação registada.</p>`
-        : (pet.medications || []).map((m,i) => `
+      ? `<p style="font-size:.85rem;color:var(--text-muted)">Nenhuma medicação registada.</p>`
+      : (pet.medications || []).map((m, i) => `
           <div style="display:flex;align-items:center;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid var(--border)">
             <div>
               <strong>${m.name}</strong>
@@ -689,7 +689,7 @@ function renderProfile() {
             </div>
             <button class="btn-icon" onclick="removeMed('${pet.id}',${i})" title="Remover">🗑️</button>
           </div>`).join('')
-      }
+    }
       <button class="btn-secondary btn-sm" style="margin-top:.75rem" onclick="openMedsModal('${pet.id}')">+ Adicionar Medicação</button>
     </div>
 
@@ -697,10 +697,10 @@ function renderProfile() {
     ${(stage.name === 'Sénior' || stage.name === 'Geriátrico') && pet.seniorConditions ? `
     <div class="card-section" style="border-color:var(--purple-light)">
       <div class="card-section-title" style="color:var(--purple)">👴 Condições Séniores Registadas</div>
-      ${Object.entries(pet.seniorConditions || {}).filter(([,v])=>v).map(([k]) => {
-        const labels = {diaper:'Usa fraldas',blind:'Perda de visão',deaf:'Perda de audição',mobility:'Dificuldade de mobilidade',incontinence:'Incontinência',confusion:'Desorientação',appetite_loss:'Perda de apetite'};
-        return `<div class="chip" style="margin:.2rem">${labels[k]||k}</div>`;
-      }).join('')}
+      ${Object.entries(pet.seniorConditions || {}).filter(([, v]) => v).map(([k]) => {
+      const labels = { diaper: 'Usa fraldas', blind: 'Perda de visão', deaf: 'Perda de audição', mobility: 'Dificuldade de mobilidade', incontinence: 'Incontinência', confusion: 'Desorientação', appetite_loss: 'Perda de apetite' };
+      return `<div class="chip" style="margin:.2rem">${labels[k] || k}</div>`;
+    }).join('')}
     </div>` : ''}
 
     <!-- Actions -->
@@ -724,7 +724,7 @@ function renderProfile() {
         <label class="form-label">Próxima consulta</label>
         <input class="form-control" type="date" value="${pet.nextVetVisit || ''}" onchange="updatePetField('${pet.id}','nextVetVisit',this.value)">
       </div>
-      ${pet.nextVetVisit && new Date(pet.nextVetVisit) <= new Date(Date.now() + 7*24*60*60*1000) ? `
+      ${pet.nextVetVisit && new Date(pet.nextVetVisit) <= new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) ? `
         <div class="alert-banner info">
           <img src="images/vet.svg" style="width:18px;height:18px;flex-shrink:0">
           <div><strong>Consulta próxima!</strong><p>A próxima consulta de ${pet.name} é em ${new Date(pet.nextVetVisit).toLocaleDateString('pt-PT')}.</p></div>
@@ -747,7 +747,7 @@ function renderHistory() {
   }
 
   const petLogs = state.logs[pet.id] || {};
-  const dates = Object.keys(petLogs).sort((a,b) => b.localeCompare(a));
+  const dates = Object.keys(petLogs).sort((a, b) => b.localeCompare(a));
 
   if (dates.length === 0) {
     el.innerHTML = `
@@ -807,7 +807,7 @@ function filterHistory(filter, btn) {
   document.querySelectorAll('.timeline-item').forEach(item => {
     const date = item.dataset.date;
     const hasAlerts = item.dataset.alerts === 'true';
-    const isThisWeek = new Date(date) >= new Date(Date.now() - 7*24*60*60*1000);
+    const isThisWeek = new Date(date) >= new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
     if (filter === 'all') item.style.display = '';
     else if (filter === 'alerts') item.style.display = hasAlerts ? '' : 'none';
     else if (filter === 'week') item.style.display = isThisWeek ? '' : 'none';
@@ -845,8 +845,8 @@ function renderAddPetModal(pet) {
       <div class="avatar-upload" onclick="document.getElementById('avatar-input').click()">
         <div class="avatar-upload-preview" id="avatar-preview">
           ${currentAvatarData
-            ? `<img src="${currentAvatarData}" alt="foto">`
-            : `<img src="images/${pet?.type || 'dog'}.svg" alt="pet" id="avatar-default-icon" style="width:60px;height:60px;padding:10px">`}
+      ? `<img src="${currentAvatarData}" alt="foto">`
+      : `<img src="images/${pet?.type || 'dog'}.svg" alt="pet" id="avatar-default-icon" style="width:60px;height:60px;padding:10px">`}
         </div>
         <div class="avatar-upload-btn">📷</div>
       </div>
@@ -871,9 +871,7 @@ function renderAddPetModal(pet) {
 
     <input type="hidden" id="pet-type-val" value="${pet?.type || 'dog'}">
 
-  /* ... dentro da função renderAddPetModal(pet) ... */
-
-    <div class="form-group">
+     <div class="form-group">
       <label class="form-label">Nome do pet</label>
       <input class="form-control" type="text" id="pet-name" placeholder="Ex: Rex, Mimi, Bolinha..." value="${pet?.name || ''}">
     </div>
@@ -1277,7 +1275,7 @@ function confirmDeletePet(petId) {
 ───────────────────────────────────────────── */
 function renderPetSelector(containerId) {
   const el = document.getElementById(containerId);
-  if (!el || state.pets.length <= 1) { if(el) el.innerHTML = ''; return; }
+  if (!el || state.pets.length <= 1) { if (el) el.innerHTML = ''; return; }
   el.innerHTML = `
     <div style="overflow-x:auto;padding-bottom:.25rem">
       <div style="display:flex;gap:.5rem;min-width:max-content">
